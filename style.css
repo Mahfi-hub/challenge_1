@@ -25,9 +25,9 @@ body{
   display: flex;
 }
 .container{
-  max-width: 375px;
-  width: 100%;
-  margin: auto;
+  max-width: 600px;
+  /*width: 100%;*/
+  margin: auto 10% auto 10%;
   display : grid;
   grid-template-rows: 1fr 1fr 1fr;
   /* minmax(auto, auto);*/
@@ -102,14 +102,13 @@ button{
   display: inline-block;
   font-weight: 700;
   background-color: var(--Bright-Yellow) ;
-  width: 16rem;
+  width: 80%;/*16rem;*/
   height: 3rem;
   margin: 1rem 0 0.5rem 0;
   border-radius: 0.5rem;
   box-shadow: 2px 2px 2px rgb(116, 88, 88);
   border : none;
   align-self: center;
-  
 }
 button:hover{
   box-shadow: 2px 2px 2px #000;
@@ -132,19 +131,20 @@ li{
  padding-top: 0.5rem;
 
 }
+/*
 @media screen and (min-width:500px){
   .container{
     max-width: 760px ;
     width: 100%;
     margin: auto 10% auto 10%;
-}
+}*/
 
-@media screen and (min-width:768px){
+@media screen and (min-width:600px){
   .container{
-    max-width:1100px;
+    max-width:650px;
     width: 100%;
     display: grid;
-    margin: auto 10% auto 10%;
+    margin: auto;
     grid-template-rows: 1fr auto;
     grid-template-columns: 50% 50%;
   }
@@ -164,8 +164,4 @@ li{
     grid-column: 2/3;
   }
 }
-@media screen and (min-width:1101px){}
- .container{
-   margin: auto;
- }
-}
+
