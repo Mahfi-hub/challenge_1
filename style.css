@@ -23,10 +23,10 @@ body{
   height: 100vh;
   background-color: var(--Light-Gray);
   display: flex;
-
 }
 .container{
   max-width: 375px;
+  width: 100%;
   margin: auto;
   display : grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -114,23 +114,35 @@ button{
 button:hover{
   box-shadow: 2px 2px 2px #000;
   background-color: var(--Bright-Yellow--light);
+  cursor: pointer;
+}
+button:active{
+  box-shadow: none;
+  border: grey 2px solid;
+  background-color: var(--Bright-Yellow--light);
 }
 ul{
   list-style: none;
   color: var(--Light-Gray) ;
   font-size: 0.9rem;
-  margin: 0.5rem 0 0.5rem 0;
+  margin: auto;
 }
 li{
   padding-bottom: 0.5rem;
 }
+@media screen and (min-width:500px){
+  .container{
+    max-width: 760px ;
+    width: 100%;
+    margin: auto 10% auto 10%;
+}
 
 @media screen and (min-width:768px){
-  
   .container{
-    max-width:640px;
-    
+    max-width:1100px;
+    width: 100%;
     display: grid;
+    margin: auto 10% auto 10%;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
   }
@@ -140,15 +152,18 @@ li{
     
   }
   .section2{
-    grid-area: section2;
     justify-content: center;
     grid-row: 2/3;
     grid-column: 1/2;
-
+    
   }
   .section3{
-    grid-area: section3;
     grid-row: 2/3;
     grid-column: 2/3;
   }
+}
+@media screen and (min-width:1101px){}
+ .container{
+   margin: auto;
+ }
 }
